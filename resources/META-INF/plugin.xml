@@ -1,0 +1,38 @@
+<idea-plugin>
+  <id>cn.yzl.android.avd.manager</id>
+  <name>Android Avd Manager</name>
+  <version>1.0.0</version>
+  <vendor email="zeliangyi@gmail.com" url="https://github.com/yizeliang">Github</vendor>
+
+  <description><![CDATA[
+      help start android avd
+    ]]></description>
+
+  <change-notes><![CDATA[
+    ]]>
+  </change-notes>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="145.0"/>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <!-- uncomment to enable plugin in all products
+  <depends>com.intellij.modules.lang</depends>
+  -->
+  <depends>com.intellij.modules.lang</depends>
+  <extensions defaultExtensionNs="com.intellij">
+    <applicationConfigurable instance="cn.yzl.android.avd.manager.setting.Setting"/>
+  </extensions>
+
+  <actions>
+
+    <action class="cn.yzl.android.avd.manager.Action" id="InjectionAction"
+            text="AndroidAvdManager"
+    >
+      <add-to-group group-id="ToolsMenu"/>
+    </action>
+
+  </actions>
+
+</idea-plugin>
